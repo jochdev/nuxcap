@@ -1,27 +1,21 @@
 {
-  "name": "nuxcap",
+  "name": "nuxcap-monorepo",
   "private": true,
-  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
-  },
-  "dependencies": {
-    "@iconify-json/lucide": "^1.2.89",
-    "@iconify-json/simple-icons": "^1.2.70",
-    "@nuxt/ui": "^4.4.0",
-    "nuxt": "^4.3.1",
-    "tailwindcss": "^4.1.18"
+    "dev:mobile": "npm run dev -w @nuxcap/mobile",
+    "dev:admin": "npm run dev -w @nuxcap/admin",
+    "mobile:setup": "npm run generate -w @nuxcap/mobile && cd apps/mobile && npx cap add android",
+    "mobile:sync": "npm run generate -w @nuxcap/mobile && cd apps/mobile && npx cap sync",
+    "mobile:open": "cd apps/mobile && npx cap open android",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.14.0",
-    "eslint": "^10.0.0",
-    "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.4"
-  },
-  "packageManager": "pnpm@10.29.2"
+    "typescript": "^5.9.3"
+  }
 }

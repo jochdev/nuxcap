@@ -58,3 +58,6 @@ pnpm preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+692igo5Djmi9zc3s

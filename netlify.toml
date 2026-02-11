@@ -1,0 +1,16 @@
+[build]
+  # Configurar el comando de build para que ejecute el script desde la raíz, pero apuntando al admin
+  command = "npm run build:admin"
+  # Directorio de salida donde Nuxt Admin genera los archivos estáticos/server
+  publish = "apps/admin/.output/public"
+
+[build.environment]
+  # Variables de entorno por defecto (puedes sobreescribirlas en Netlify UI)
+  NODE_VERSION = "20"
+  NUXT_PRESET = "netlify"
+
+# Redirecciones SPA si fuera necesario, aunque Nitro maneja esto usualmente
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

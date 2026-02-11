@@ -1,0 +1,20 @@
+{
+    "name": "@nuxcap/shared",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "nuxi dev",
+        "build": "nuxi build",
+        "prepare": "nuxi prepare"
+    },
+    "dependencies": {
+        "@nuxtjs/supabase": "^1.1.6",
+        "@nuxt/ui": "^3.0.0-alpha.12",
+        "@nuxt/fonts": "^0.10.3",
+        "@pinia/nuxt": "latest",
+        "pinia": "latest",
+        "pinia-plugin-persistedstate": "latest",
+        "@pinia-plugin-persistedstate/nuxt": "latest",
+        "nuxt": "^4.3.1"
+    }
+}

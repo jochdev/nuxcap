@@ -1,0 +1,28 @@
+{
+    "name": "@nuxcap/admin",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "npx nuxt build",
+        "dev": "npx nuxt dev",
+        "generate": "npx nuxt generate",
+        "preview": "npx nuxt preview",
+        "postinstall": "npx nuxt prepare",
+        "lint": "eslint .",
+        "typecheck": "npx nuxt typecheck"
+    },
+    "dependencies": {
+        "@iconify-json/lucide": "^1.2.89",
+        "@iconify-json/simple-icons": "^1.2.70",
+        "@nuxt/ui": "^3.0.0-alpha.12",
+        "nuxt": "^4.3.1",
+        "tailwindcss": "^4.0.0",
+        "@nuxcap/shared": "*"
+    },
+    "devDependencies": {
+        "@nuxt/eslint": "^1.14.0",
+        "eslint": "^10.0.0",
+        "typescript": "^5.9.3",
+        "vue-tsc": "^3.2.4"
+    }
+}
