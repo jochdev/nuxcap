@@ -1,63 +1,45 @@
-# Nuxt Starter Template
+# Nuxcap Monorepo
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+Integra Nuxt.js con Capacitor para construir aplicaciones híbridas (web + móvil) usando un solo código base. Simplifica el acceso a APIs nativas (cámara, GPS, notificaciones) y despliega en iOS, Android y web con configuración automatizada y soporte para SSR/SSG.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+## 🚀 Características Principales
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+- **Arquitectura Monorepo**: Gestiona múltiples aplicaciones (`mobile`, `admin`) compartiendo lógica (`packages/shared`).
+- **Autenticación Robusta**: Supabase Auth integrado con flujo de OTP (One-Time Password).
+- **Gestión Remota**: Controla la app móvil desde el panel de administración (Feature Flags, Modo Mantenimiento, Versiones).
+- **Base Nativa**: Configuración de Capacitor optimizada para Android (Splash screen, Safe Areas, Teclado).
+- **Nuxt 4 Ready**: Utiliza las últimas tecnologías del ecosistema Vue/Nuxt.
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-  </picture>
-</a>
+## 📚 Documentación
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+Para una guía detallada sobre la arquitectura y configuración, consulta [DOCUMENTATION.md](./DOCUMENTATION.md).
 
-## Quick Start
+## 🛠️ Inicio Rápido
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/starter
-```
+1.  **Instalar dependencias**:
+    ```bash
+    npm install
+    ```
 
-## Deploy your own
+2.  **Iniciar entornos de desarrollo**:
+    ```bash
+    # Terminal 1: App Móvil
+    npm run dev:mobile
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
+    # Terminal 2: Panel de Administración
+    npm run dev:admin
+    ```
 
-## Setup
+3.  **Configuración Móvil (Android)**:
+    ```bash
+    npm run mobile:setup
+    ```
 
-Make sure to install the dependencies:
+## 📱 Despliegue
 
-```bash
-pnpm install
-```
+- **Web (Admin)**: Configurado para despliegue en Netlify (`npm run build:admin`).
+- **Móvil (App)**: Generación estática para Capacitor (`npm run mobile:sync`).
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-pnpm dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-pnpm build
-```
-
-Locally preview production build:
-
-```bash
-pnpm preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-
-692igo5Djmi9zc3s
+Creado por **Jochdev** with **Antigravity** 🚀

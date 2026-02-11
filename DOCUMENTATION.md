@@ -76,3 +76,5 @@ Located at `/settings`, allows admins to:
 ---
 
 **Built with:** Nuxt 4, Nuxt UI v3, Supabase, Capacitor 6.
+  
+Creado por **Jochdev** with **Antigravity** 🚀
