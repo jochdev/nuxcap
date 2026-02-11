@@ -40,6 +40,30 @@ Para una guía detallada sobre la arquitectura y configuración, consulta [DOCUM
 - **Web (Admin)**: Configurado para despliegue en Netlify (`npm run build:admin`).
 - **Móvil (App)**: Generación estática para Capacitor (`npm run mobile:sync`).
 
+## 🤝 Contribución
+
+¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, por favor revisa nuestra [Guía de Contribución](./CONTRIBUTING.md).
+
+1.  Haz un Fork del repositorio.
+2.  Crea una rama para tu feature (`git checkout -b feature/amazing-feature`).
+3.  Envía un Pull Request.
+
+## 💎 Licencia y Actualizaciones
+
+Este proyecto es Open Source bajo la licencia MIT para uso educativo y personal.
+
+**¿Quieres recibir actualizaciones automáticas y soporte premium?**
+
+Suscríbete a nuestro plan **Pro** para obtener:
+- Acceso temprano a nuevas características (Beta Access).
+- Soporte prioritario para problemas de configuración.
+- Actualizaciones automáticas de dependencias y migraciones de Nuxt.
+### 📬 Contáctame para Soporte Premium
+
+- **Twitter**: [@jochdev](https://twitter.com/jochdev)
+- **Telegram**: [@jochdev](https://t.me/jochdev)
+- **WhatsApp**: [Chat Directo](https://wa.me/message/M2D6DXG6VOW6A1)
+
 ---
 
 Creado por **Jochdev** with **Antigravity** 🚀
