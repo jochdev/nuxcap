@@ -27,20 +27,20 @@
             </div>
             <USwitch v-model="config.maintenance.enabled" color="error" />
           </div>
-          <UFormGroup label="Maintenance Message" v-if="config.maintenance.enabled">
+          <UFormField label="Maintenance Message" v-if="config.maintenance.enabled">
             <UInput v-model="config.maintenance.message" />
-          </UFormGroup>
+          </UFormField>
 
           <USeparator />
 
           <!-- App Version -->
           <div class="grid grid-cols-2 gap-4">
-            <UFormGroup label="Minimum Version" description="Older versions will be forced to update">
+            <UFormField label="Minimum Version" description="Older versions will be forced to update">
               <UInput v-model="config.version.min_version" placeholder="1.0.0" />
-            </UFormGroup>
-            <UFormGroup label="Latest Version" description="Current store version">
+            </UFormField>
+            <UFormField label="Latest Version" description="Current store version">
               <UInput v-model="config.version.latest_version" placeholder="1.0.1" />
-            </UFormGroup>
+            </UFormField>
           </div>
           
           <UCheckbox v-model="config.version.force_update" label="Force Update Alert" />

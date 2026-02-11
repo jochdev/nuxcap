@@ -10,21 +10,21 @@
         <form @submit.prevent="handleLogin" class="space-y-4">
           <!-- Paso 1: Email -->
           <div v-if="step === 1">
-            <UFormGroup label="Admin Email" name="email">
+            <UFormField label="Admin Email" name="email">
               <UInput v-model="email" type="email" placeholder="admin@nuxcap.com" icon="i-lucide-shield" required />
-            </UFormGroup>
-            <UButton type="submit" block :loading="loading" color="black" class="mt-4">
+            </UFormField>
+            <UButton type="submit" block :loading="loading" color="neutral" class="mt-4">
               Send Secure Code
             </UButton>
           </div>
 
           <!-- Paso 2: OTP -->
           <div v-else>
-            <UFormGroup label="Verification Code" name="otp">
+            <UFormField label="Verification Code" name="otp">
               <UInput v-model="otp" type="text" placeholder="######" icon="i-lucide-lock" required autocapitalize="off" />
-            </UFormGroup>
+            </UFormField>
             
-            <UButton type="submit" block :loading="loading" color="green" class="mt-4">
+            <UButton type="submit" block :loading="loading" color="success" class="mt-4">
               Unlock Dashboard
             </UButton>
             
@@ -54,9 +54,9 @@ const handleLogin = async () => {
     const success = await sendOtp(email.value)
     if (success) {
       step.value = 2
-      toast.add({ title: 'Code sent', color: 'green' })
+      toast.add({ title: 'Code sent', color: 'success' })
     } else {
-      toast.add({ title: 'Error', description: error.value, color: 'red' })
+      toast.add({ title: 'Error', description: error.value, color: 'error' })
     }
   } else {
     if (!otp.value) return
@@ -64,10 +64,10 @@ const handleLogin = async () => {
     if (success) {
       // Check Admin Role
       // if (!isAdmin.value) { ... handle unauthorized ... }
-      toast.add({ title: 'Welcome Admin', color: 'green' })
+      toast.add({ title: 'Welcome Admin', color: 'success' })
       return navigateTo('/')
     } else {
-      toast.add({ title: 'Invalid Code', description: error.value, color: 'red' })
+      toast.add({ title: 'Invalid Code', description: error.value, color: 'error' })
     }
   }
 }

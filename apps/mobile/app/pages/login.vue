@@ -11,9 +11,9 @@
         <form @submit.prevent="handleLogin" class="space-y-4">
           <!-- Paso 1: Ingreso de Email -->
           <template v-if="step === 1">
-            <UFormGroup label="Email" name="email">
+            <UFormField label="Email" name="email">
               <UInput v-model="email" type="email" placeholder="you@example.com" icon="i-lucide-mail" required />
-            </UFormGroup>
+            </UFormField>
             <UButton type="submit" block :loading="loading" :disabled="!email">
               Send Code
             </UButton>
@@ -21,9 +21,9 @@
 
           <!-- Paso 2: Ingreso de OTP -->
           <template v-else>
-            <UFormGroup label="OTP Code" name="otp">
+            <UFormField label="OTP Code" name="otp">
               <UInput v-model="otp" type="number" placeholder="123456" icon="i-lucide-key" required />
-            </UFormGroup>
+            </UFormField>
             <div class="flex justify-between items-center text-sm">
               <span class="text-muted-foreground">{{ remainingTime }}s</span>
               <button @click="resendCode" :disabled="remainingTime > 0" class="text-primary hover:underline">

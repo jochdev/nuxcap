@@ -8,9 +8,9 @@
 
       <UCard>
         <form @submit.prevent="handleRegister" class="space-y-4">
-          <UFormGroup label="Email" name="email">
+          <UFormField label="Email" name="email">
             <UInput v-model="email" type="email" placeholder="you@example.com" icon="i-lucide-mail" required />
-          </UFormGroup>
+          </UFormField>
 
           <UButton type="submit" block :loading="loading" :disabled="!email">
             Send Code
